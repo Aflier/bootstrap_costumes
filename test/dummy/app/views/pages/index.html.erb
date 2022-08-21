@@ -1,0 +1,42 @@
+<%= render 'bootstrap_costumes/alerts/alert__help' do %>HELP<% end %>
+<%= render 'bootstrap_costumes/alerts/alert__info' do %>INFO<% end %>
+<%= render 'bootstrap_costumes/alerts/alert__success' do %>SUCCESS<% end %>
+<%= render 'bootstrap_costumes/alerts/alert__warning' do %>WARNING<% end %>
+<%= render 'bootstrap_costumes/alerts/alert__danger' do %>
+  DANGER
+  <hr>
+  Some more text!
+<% end %>
+
+<%= render 'bootstrap_costumes/cards/tabbed_card', tabs: Page.top_pages %>
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Page</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr>
+        <td><%= page.name %></td>
+        <td><%= page.page_id %></td>
+        <td><%= link_to 'Show', page %></td>
+        <td><%= link_to 'Edit', edit_page_path(page) %></td>
+        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Page', new_page_path %>

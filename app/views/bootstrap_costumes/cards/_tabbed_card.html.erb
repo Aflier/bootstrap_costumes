@@ -1,0 +1,53 @@
+<% options = {} if local_assigns[:options].nil? %>
+
+<div class="card shadow mb-3">
+  <div class="card-header">
+
+    <% if options[:links] %>
+      <% options[:links].each do |link| %>
+        <div class="float-end">
+          <%= raw link[:path] %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <nav class="float-start">
+      <ul class="nav nav-tabs card-header-tabs nav-pills" id="nav-tab" role="tablist">
+        <% options[:breadcrumbs].each_with_index do |breadcrumb, index| %>
+          <li class="nav-item" role="presentation">
+            <%= link_to raw("#{breadcrumb[:name]} #{icons__right}"), breadcrumb[:path], class: 'nav-link' %>
+          </li>
+        <% end if options[:breadcrumbs] %>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul class="nav nav-tabs card-header-tabs" id="nav-tab" role="tablist">
+        <% tabs.each_with_index do |tab, index| %>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link <%= 'active' if index == 0 %>"
+                    id="nav-<%= tab[:name].underscore %>-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-<%= tab[:id] %>"
+                    type="button"
+                    role="tab"
+                    aria-controls="home-tab-pane" aria-selected="true">
+              <%= tab[:name] %>
+            </button>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+
+  </div>
+  <div class="card-body">
+    <div class="tab-content" id="nav-tabContent">
+      <% tabs.each_with_index do |tab, index| %>
+        <div class="tab-pane fade show <%= 'active' if index == 0 %>"
+             id="nav-<%= tab[:id] %>" role="tabpanel" aria-labelledby="nav-home-tab">
+          <%= tab[:body] %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
