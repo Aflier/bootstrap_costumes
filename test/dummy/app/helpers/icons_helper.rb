@@ -12,10 +12,6 @@ module IconsHelper
     raw '<i class="fa-solid fa-circle-exclamation"></i>'
   end
 
-  def icons__warning
-    raw '<i class="fa-solid fa-circle-exclamation"></i>'
-  end
-
   def icons__info
     raw '<i class="fa-solid fa-circle-exclamation"></i>'
   end
