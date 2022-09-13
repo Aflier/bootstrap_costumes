@@ -27,8 +27,8 @@
           <li class="nav-item" role="presentation">
             <button class="nav-link <%= 'active' if index == 0 %>"
                     id="nav-<%= tab[:name].underscore %>-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#nav-<%= tab[:id] %>"
+                    data-<%= 'bs-' unless options[:legacy] %>toggle="tab"
+                    data-<%= 'bs-' unless options[:legacy] %>target="#nav-<%= tab[:id] %>"
                     type="button"
                     role="tab"
                     aria-controls="home-tab-pane" aria-selected="true">
