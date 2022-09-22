@@ -3,7 +3,7 @@ module BootstrapCostumes
     class InstallGenerator < Rails::Generators::Base
       def create_initializer_file
         create_file "config/initializers/initializer.rb", "# Add initialization content here"
-        copy_file "app/helpers/icons__helper.rb", File.expand_path("../../../../app/helpers/icons__helper.rb", __FILE__)
+        copy_file File.expand_path("../../../../app/helpers/icons__helper.rb"), __FILE__, "app/helpers/icons__helper.rb"
       end
     end
   end
