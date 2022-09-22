@@ -3,6 +3,7 @@ import {Turbo} from "@hotwired/turbo-rails"
 import swal from "sweetalert2";
 
 // Connects to data-controller="turbo"
+
 export default class extends Controller {
     static targets = ['spinner', 'label']
     static values = {confirm: String, method: String, spin: Boolean}
