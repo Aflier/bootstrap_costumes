@@ -44,11 +44,12 @@ include BootstrapCostumes::IconsHelper
 ### Tabbed Card
 
 ```bash
-<%= render 'bootstrap_costumes/cards/tabbed_card', tabs: [{ id: 'tab', name: 'Tab', body: render('tab')}],
+<%= render 'bootstrap_costumes/cards/tabbed_card', 
+           tabs: [{ id: 'tab', name: 'Tab', body: render('tab')}],
            options: {
              legacy: true,
              breadcrumbs: [ { name: "Breadcrumb", path: something_path(something) }] },
-             links: [ { name: 'Link', path: by_source_weekly_business_path(@business, format: 'csv') }] %>
+             links: [ { name: 'Link', path: something_path(other) }] %>
 ```
 
 ### Alerts
