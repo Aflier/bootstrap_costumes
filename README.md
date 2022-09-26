@@ -2,7 +2,9 @@
 Short description and motivation.
 
 ## Usage
-How to use my plugin.
+Warning this is something we use internally and likely to dramatically changed. Once we think 
+it is stable enough we will probably make it into a proper gem. If you like what we have feel
+free to do with it what you want... just give us a shout out.
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -19,6 +21,44 @@ $ bundle
 Or install it yourself as:
 ```bash
 $ gem install bootstrap_costumes
+```
+
+## Generators
+
+```bash
+$ rails generate bootstrap_costumes:install
+```
+
+## Getting Started
+
+### Icons
+
+Add to a helper so you have access to the icons used. This requires font awesome however
+you can define your own.
+
+```bash
+include BootstrapCostumes::IconsHelper
+```
+
+
+### Tabbed Card
+
+```bash
+<%= render 'bootstrap_costumes/cards/tabbed_card', tabs: [{ id: 'tab', name: 'Tab', body: render('tab')}],
+           options: {
+             legacy: true,
+             breadcrumbs: [ { name: "Breadcrumb", path: something_path(something) }] },
+             links: [ { name: 'Link', path: by_source_weekly_business_path(@business, format: 'csv') }] %>
+```
+
+### Alerts
+
+```bash
+<%= render 'bootstrap_costumes/alerts/alert__help' do %>HELP<% end %>
+<%= render 'bootstrap_costumes/alerts/alert__info' do %>INFO<% end %>
+<%= render 'bootstrap_costumes/alerts/alert__success' do %>SUCCESS<% end %>
+<%= render 'bootstrap_costumes/alerts/alert__warning' do %>WARNING<% end %>
+<%= render 'bootstrap_costumes/alerts/alert__danger' do %>DANGER<% end %>
 ```
 
 ## Contributing
