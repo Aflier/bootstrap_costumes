@@ -52,6 +52,8 @@ include BootstrapCostumes::IconsHelper
              links: [ { name: 'Link', path: something_path(other) }] %>
 ```
 
+Only use "legacy: true" if you are using version 4 of bootstrap.
+
 ### Alerts
 
 ```bash
