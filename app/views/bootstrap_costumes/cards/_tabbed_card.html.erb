@@ -5,7 +5,7 @@
 
     <% if options[:links] %>
       <% options[:links].each do |link| %>
-        <div class="float-end">
+        <div class="<%= options[:legacy] ? 'float-right' : 'float-end' %>">
           <%= raw link[:path] %>
         </div>
       <% end %>
