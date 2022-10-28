@@ -4,7 +4,8 @@ module BootstrapCostumes
       source_root File.expand_path("../templates", __FILE__)
 
       def create_initializer_file
-        template "bob.js", "app/javascript/controllers/turbo_controller.js"
+        template "turbo_controller.js", "app/javascript/controllers/turbo_controller.js"
+        template "modal_controller.js", "app/javascript/controllers/modal_controller.js"
 
         # copy_file File.expand_path("../../../../app/javascript/bootstrap_costumes/controllers/turbo_controller.js", __FILE__), "app/javascript/controllers/turbo_controller.js"
       end
