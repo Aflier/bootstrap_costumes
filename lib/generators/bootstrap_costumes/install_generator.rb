@@ -1,10 +1,10 @@
 module BootstrapCostumes
   module Generators
     class InstallGenerator < Rails::Generators::Base
-      source_root File.expand_path("../../../../app", __FILE__)
+      source_root File.expand_path("./templates", __FILE__)
 
       def create_initializer_file
-        template "/javascript/bootstrap_costumes/controllers/turbo_controller.js", "app/javascript/controllers/turbo_controller.js"
+        template "bob.js", "app/javascript/controllers/turbo_controller.js"
 
         # copy_file File.expand_path("../../../../app/javascript/bootstrap_costumes/controllers/turbo_controller.js", __FILE__), "app/javascript/controllers/turbo_controller.js"
       end
