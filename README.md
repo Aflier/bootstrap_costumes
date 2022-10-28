@@ -10,7 +10,7 @@ free to do with it what you want... just give us a shout out.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bootstrap_costumes'
+gem 'bootstrap_costumes', git: 'https://github.com/Aflier/bootstrap_costumes.git'
 ```
 
 And then execute:
