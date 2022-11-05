@@ -48,8 +48,8 @@ include BootstrapCostumes::IconsHelper
            tabs: [{ id: 'tab', name: 'Tab', body: render('tab')}],
            options: {
              legacy: true,
-             breadcrumbs: [ { name: "Breadcrumb", path: something_path(something) }] },
-             links: [ { name: 'Link', path: something_path(other) }] %>
+             breadcrumbs: [ { name: "Breadcrumb", path: something_path(something) }],
+             links: [ { name: 'Link', path: something_path(other) }] } %>
 ```
 
 Only use "legacy: true" if you are using version 4 of bootstrap.
