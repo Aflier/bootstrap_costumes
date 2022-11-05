@@ -45,32 +45,30 @@ include BootstrapCostumes::IconsHelper
 Example HTML
 
 ```bash
-  <tbody data-controller="position"
-         data-position-path-value="<%= position_something_path %>">
-    <% @somethings.order(:position).each do |something| %>
-      <%= content_tag :tr, data: { sgid: something.to_sgid_param } do %>
-        <td><%= something.name %></td>
-      <% end %>
+<tbody data-controller="position"
+       data-position-path-value="<%= position_something_path %>">
+  <% @somethings.order(:position).each do |something| %>
+    <%= content_tag :tr, data: { sgid: something.to_sgid_param } do %>
+      <td><%= something.name %></td>
     <% end %>
-  </tbody>
+  <% end %>
+</tbody>
 ```
 
 Include into ruby controller
 
 ```bash
-  include BootstrapCostumes::PositionControl
+include BootstrapCostumes::PositionControl
 ```
 
 Add to routes
 
 ```bash
-   resources :somethings do
-     collection do
-       put :position
-     end
-   end
-
-
+resources :somethings do
+  collection do
+    put :position
+  end
+end
 ```
 
 ### Tabbed Card
