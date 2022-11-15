@@ -40,6 +40,36 @@ you can define your own.
 include BootstrapCostumes::IconsHelper
 ```
 
+### Position
+
+Example HTML
+
+```bash
+<tbody data-controller="position"
+       data-position-path-value="<%= position_something_path %>">
+  <% @somethings.order(:position).each do |something| %>
+    <%= content_tag :tr, data: { sgid: something.to_sgid_param } do %>
+      <td><%= something.name %></td>
+    <% end %>
+  <% end %>
+</tbody>
+```
+
+Include into ruby controller
+
+```bash
+include BootstrapCostumes::PositionControl
+```
+
+Add to routes
+
+```bash
+resources :somethings do
+  collection do
+    put :position
+  end
+end
+```
 
 ### Tabbed Card
 
@@ -48,8 +78,8 @@ include BootstrapCostumes::IconsHelper
            tabs: [{ id: 'tab', name: 'Tab', body: render('tab')}],
            options: {
              legacy: true,
-             breadcrumbs: [ { name: "Breadcrumb", path: something_path(something) }] },
-             links: [ { name: 'Link', path: something_path(other) }] %>
+             breadcrumbs: [ { name: "Breadcrumb", path: something_path(something) }],
+             links: [ { name: 'Link', path: something_path(other) }] } %>
 ```
 
 Only use "legacy: true" if you are using version 4 of bootstrap.

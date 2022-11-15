@@ -1,3 +1,3 @@
 module BootstrapCostumes
-  VERSION = '0.5.7'
+  VERSION = '0.7.1'
 end
