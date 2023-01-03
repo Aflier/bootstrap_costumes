@@ -1,0 +1,83 @@
+// Place all the styles related to the positions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.btn-outline-primary {
+  background-color: white;
+}
+
+#side-nav hr {
+  border: 3px solid white;
+  width: 100%;
+  margin-left: 15px;
+}
+
+#fixed-row {
+  padding-top: 56px;
+  height: 100vh;
+}
+
+#side-nav {
+  background-color: #172751;
+  color: white;
+
+  a {
+    color: white;
+  }
+
+  .card a {
+    color: black;
+  }
+
+  a:hover {
+    color: black;
+  }
+
+  .active {
+    color: black;
+  }
+
+  .in-one {
+    padding-left: 30px;
+  }
+
+  .in-two {
+    padding-left: 60px;
+  }
+
+  hr {
+    border: 1px solid white; width: 100%
+  }
+}
+
+#main-area {
+  padding-left: 85px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.inner-scroll {
+  max-height: 100%;
+
+}
+
+.inner-fixed {
+  height: 100%;
+}
+
+.side-nav-compact {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  width: 75px;
+  padding-top:50px
+}
+
+.container-side-nav-compact {
+  padding-left: 105px
+}
+
+.row-side-nav-compact {
+  height: 100vh ; padding-top: 42px;
+}

@@ -9,6 +9,10 @@ module BootstrapCostumes
         template "position_controller.js", "app/javascript/controllers/position_controller.js"
         template "position_control.rb", "app/controllers/concerns/position_control.rb"
 
+        template "assets/stylesheets/layout.scss", "app/assets/stylesheets/layout.scss"
+
+
+
         # copy_file File.expand_path("../../../../app/javascript/bootstrap_costumes/controllers/turbo_controller.js", __FILE__), "app/javascript/controllers/turbo_controller.js"
       end
     end
