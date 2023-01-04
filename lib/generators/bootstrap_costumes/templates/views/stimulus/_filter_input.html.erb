@@ -1,0 +1,14 @@
+<% options = {} if local_assigns[:options].nil? %>
+
+<div data-controller="filters"
+     data-filters-url-value="<%= path %>"
+     data-filters-field-value="<%= value %>">
+
+  <input type="text"
+         id="<%= options[:id] %>"
+         data-filters-target="value"
+         class="form-control form-control-sm"
+         data-action="keyup->filters#inputChanged keyup->supertable#fadeContent"
+         placeholder="<%= options[:placeholder] %>"
+         class="form-control" value="<%= current_user.filter(:value) %>">
+</div>
