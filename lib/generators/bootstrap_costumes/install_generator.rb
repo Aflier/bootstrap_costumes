@@ -11,7 +11,7 @@ module BootstrapCostumes
 
         template "assets/stylesheets/layout.scss", "app/assets/stylesheets/layout.scss"
 
-        template "views/stimulus", "app/views/stimulus"
+        template "views/stimulus/*", "app/views/stimulus/*"
 
         # copy_file File.expand_path("../../../../app/javascript/bootstrap_costumes/controllers/turbo_controller.js", __FILE__), "app/javascript/controllers/turbo_controller.js"
       end
