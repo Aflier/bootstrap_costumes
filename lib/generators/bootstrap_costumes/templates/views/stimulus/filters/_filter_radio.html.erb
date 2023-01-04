@@ -1,20 +1,20 @@
 <!-- EDIT IN STIMULUS BASE 1.2.1 -->
 
-<% if value %>
-  <%= link_to path_off, data: { controller: 'turbo', turbo_spin_value: 'true' },
+<%% if value %>
+  <%%= link_to path_off, data: { controller: 'turbo', turbo_spin_value: 'true' },
               class: "btn btn-sm text-decoration-none #{options[:on_class]}",
               id: "#{options[:id]}" do %>
-    <span data-turbo-target="spinner" hidden><%= icons__spinner %> <%= options[:label] %></span>
-    <span data-turbo-target="label"><%= icons__radio_on %> <%= options[:label] %></span>
-  <% end %>
-<% else %>
-  <%= link_to path_on, data: { controller: 'turbo', turbo_spin_value: 'true' },
+    <span data-turbo-target="spinner" hidden><%%= icons__spinner %> <%%= options[:label] %></span>
+    <span data-turbo-target="label"><%%= icons__radio_on %> <%%= options[:label] %></span>
+  <%% end %>
+<%% else %>
+  <%%= link_to path_on, data: { controller: 'turbo', turbo_spin_value: 'true' },
               class: "btn btn-sm text-decoration-none #{options[:off_class]}",
               id: "#{options[:id]}" do %>
-    <span data-turbo-target="spinner" hidden><%= icons__spinner %> <%= options[:label] %></span>
-    <span data-turbo-target="label"><%= icons__radio_off %> <%= options[:label] %></span>
-  <% end %>
-<% end %>
+    <span data-turbo-target="spinner" hidden><%%= icons__spinner %> <%%= options[:label] %></span>
+    <span data-turbo-target="label"><%%= icons__radio_off %> <%%= options[:label] %></span>
+  <%% end %>
+<%% end %>
 
 
 
