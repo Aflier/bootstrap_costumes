@@ -47,7 +47,8 @@
   }
 
   hr {
-    border: 1px solid white; width: 100%
+    border: 1px solid white;
+    width: 100%
   }
 }
 
@@ -59,7 +60,6 @@
 
 .inner-scroll {
   max-height: 100%;
-
 }
 
 .inner-fixed {
@@ -71,7 +71,7 @@
   top: 0px;
   bottom: 0px;
   width: 75px;
-  padding-top:50px
+  padding-top: 50px
 }
 
 .container-side-nav-compact {
@@ -79,5 +79,6 @@
 }
 
 .row-side-nav-compact {
-  height: 100vh ; padding-top: 42px;
+  height: 100vh;
+  padding-top: 42px;
 }
