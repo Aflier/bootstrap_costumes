@@ -11,7 +11,7 @@ module BootstrapCostumes
 
         template "assets/stylesheets/layout.scss", "app/assets/stylesheets/layout.scss"
 
-        template "model/concerns/super_table_filter.rb", "app/model/concerns/super_table_filter.rb"
+        template "models/concerns/super_table_filter.rb", "app/models/concerns/super_table_filter.rb"
         template "javascript/controller/filter_controller.js", "app/javascript/controller/filter_controller.js"
         template "views/stimulus/filters/_filter_input.html.erb", "app/views/stimulus/filters/_filter_input.html.erb"
         template "views/stimulus/filters/_filter_number_input.html.erb", "app/views/stimulus/filters/_filter_number_input.html.erb"
