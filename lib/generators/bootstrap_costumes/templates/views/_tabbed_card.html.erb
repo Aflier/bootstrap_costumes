@@ -1,53 +1,53 @@
-<% options = {} if local_assigns[:options].nil? %>
+<%% options = {} if local_assigns[:options].nil? %>
 
 <div class="card shadow mb-3">
   <div class="card-header">
 
-    <% if options[:links] %>
-      <% options[:links].each do |link| %>
-        <div class="<%= options[:legacy] ? 'float-right' : 'float-end' %>">
-          <%= raw link[:path] %>
+    <%% if options[:links] %>
+      <%% options[:links].each do |link| %>
+        <div class="<%%= options[:legacy] ? 'float-right' : 'float-end' %>">
+          <%%= raw link[:path] %>
         </div>
-      <% end %>
-    <% end %>
+      <%% end %>
+    <%% end %>
 
-    <nav class="<%= options[:legacy] ? 'float-left' : 'float-start' %>">
+    <nav class="<%%= options[:legacy] ? 'float-left' : 'float-start' %>">
       <ul class="nav nav-tabs card-header-tabs nav-pills" id="nav-tab" role="tablist">
-        <% options[:breadcrumbs].each_with_index do |breadcrumb, index| %>
+        <%% options[:breadcrumbs].each_with_index do |breadcrumb, index| %>
           <li class="nav-item" role="presentation">
-            <%= link_to raw("#{breadcrumb[:name]} #{icons__right}"), breadcrumb[:path], class: 'nav-link' %>
+            <%%= link_to raw("#{breadcrumb[:name]} #{icons__right}"), breadcrumb[:path], class: 'nav-link' %>
           </li>
-        <% end if options[:breadcrumbs] %>
+        <%% end if options[:breadcrumbs] %>
       </ul>
     </nav>
 
     <nav>
       <ul class="nav nav-tabs card-header-tabs" id="nav-tab" role="tablist">
-        <% tabs.each_with_index do |tab, index| %>
+        <%% tabs.each_with_index do |tab, index| %>
           <li class="nav-item" role="presentation">
-            <button class="nav-link <%= 'active' if index == 0 %>"
-                    id="nav-<%= tab[:id].underscore %>-tab"
-                    data-<%= 'bs-' unless options[:legacy] %>toggle="tab"
-                    data-<%= 'bs-' unless options[:legacy] %>target="#nav-<%= tab[:id] %>"
+            <button class="nav-link <%%= 'active' if index == 0 %>"
+                    id="nav-<%%= tab[:id].underscore %>-tab"
+                    data-<%%= 'bs-' unless options[:legacy] %>toggle="tab"
+                    data-<%%= 'bs-' unless options[:legacy] %>target="#nav-<%%= tab[:id] %>"
                     type="button"
                     role="tab"
                     aria-controls="home-tab-pane" aria-selected="true">
-              <%= tab[:name] %>
+              <%%= tab[:name] %>
             </button>
           </li>
-        <% end %>
+        <%% end %>
       </ul>
     </nav>
 
   </div>
   <div class="card-body">
     <div class="tab-content" id="nav-tabContent">
-      <% tabs.each_with_index do |tab, index| %>
-        <div class="tab-pane fade show <%= 'active' if index == 0 %>"
-             id="nav-<%= tab[:id] %>" role="tabpanel" aria-labelledby="nav-home-tab">
-          <%= tab[:body] %>
+      <%% tabs.each_with_index do |tab, index| %>
+        <div class="tab-pane fade show <%%= 'active' if index == 0 %>"
+             id="nav-<%%= tab[:id] %>" role="tabpanel" aria-labelledby="nav-home-tab">
+          <%%= tab[:body] %>
         </div>
-      <% end %>
+      <%% end %>
     </div>
   </div>
 </div>
