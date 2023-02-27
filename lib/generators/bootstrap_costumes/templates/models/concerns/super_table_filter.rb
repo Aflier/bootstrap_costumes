@@ -14,4 +14,21 @@ module SuperTableFilter
   def filter(field)
     filters_store[field.to_s]
   end
+
+  def handle_radio(field, by, related)
+    return if field.blank?
+
+    if by == 'true'
+      related.each do |filter|
+        set_filter(filter, false)
+      end
+    end
+
+    set_filter(field, by)
+  end
+
+  def filter_instance(filter_name, klass)
+    return if filter(filter_name).nil?
+    return klass.find_by(id: filter(filter_name).to_i) if klass.find_by(id: filter(filter_name).to_i)
+  end
 end
