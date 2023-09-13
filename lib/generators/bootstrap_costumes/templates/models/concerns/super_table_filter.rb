@@ -17,6 +17,22 @@ module SuperTableFilter
     filters_store[field.to_s]
   end
 
+  def set_behaviour(field, by)
+    return if field.nil?
+
+    by = false if by == 'false'
+    by = true if by == 'true'
+    self.behaviour_store[field.to_s] = by
+    self.save!
+  rescue
+    self.behaviour_store = {}
+    self.save!
+  end
+
+  def behaviour(field)
+    behaviour_store[field.to_s]
+  end
+
   def handle_radio(field, by, related)
     return if field.blank?
 
