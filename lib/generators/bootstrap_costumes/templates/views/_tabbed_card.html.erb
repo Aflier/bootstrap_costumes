@@ -12,7 +12,7 @@
     <%% end %>
 
     <nav class="<%%= options[:legacy] ? 'float-left' : 'float-start' %>">
-      <ul class="nav nav-tabs card-header-tabs nav-pills" id="nav-tab" role="tablist">
+      <ul class="nav nav-tabs card-header-tabs nav-pills d-none d-sm-block" id="nav-tab" role="tablist">
         <%% options[:breadcrumbs].each_with_index do |breadcrumb, index| %>
           <li class="nav-item" role="presentation">
             <%%= link_to raw("#{breadcrumb[:name]} #{icons__right}"), breadcrumb[:path], class: 'nav-link' %>
@@ -25,14 +25,21 @@
       <ul class="nav nav-tabs card-header-tabs" id="nav-tab" role="tablist">
         <%% tabs.each_with_index do |tab, index| %>
           <li class="nav-item" role="presentation">
-            <button class="nav-link <%%= options[:active_tab] ? ('active' if tab[:id] == options[:active_tab]) : ('active' if index == 0 ) %>"
+            <button class="nav-link <%%= options[:active_tab] ? ('active' if tab[:id] == options[:active_tab]) : ('active' if index == 0) %>"
                     id="nav-<%%= tab[:id].underscore %>-tab"
                     data-<%%= 'bs-' unless options[:legacy] %>toggle="tab"
                     data-<%%= 'bs-' unless options[:legacy] %>target="#nav-<%%= tab[:id] %>"
+                    data-action="click->help-slider#setTab"
+                    data-help-slider-tab-param="<%%= tab[:id] unless index == 0 %>"
                     type="button"
                     role="tab"
                     aria-controls="home-tab-pane" aria-selected="true">
-              <%%= tab[:name] %>
+              <span class="d-none d-sm-block">
+                <%%= tab[:icon] %> <%%= tab[:name] %>
+              </span>
+              <span class=" d-block d-sm-none">
+                <%%= tab[:icon] %> <%%= tab[:name] unless tab[:icon] %>
+              </span>
             </button>
           </li>
         <%% end %>
@@ -43,7 +50,7 @@
   <div class="card-body">
     <div class="tab-content" id="nav-tabContent">
       <%% tabs.each_with_index do |tab, index| %>
-        <div class="tab-pane fade show <%%= options[:active_tab] ? ('active' if tab[:id] == options[:active_tab]) : ('active' if index == 0 ) %>"
+        <div class="tab-pane fade show <%%= options[:active_tab] ? ('active' if tab[:id] == options[:active_tab]) : ('active' if index == 0) %>"
              id="nav-<%%= tab[:id] %>" role="tabpanel" aria-labelledby="nav-home-tab">
           <%%= tab[:body] %>
         </div>

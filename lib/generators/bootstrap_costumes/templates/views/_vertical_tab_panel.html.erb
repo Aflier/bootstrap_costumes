@@ -1,0 +1,33 @@
+<%% options = {} if local_assigns[:options].nil? %>
+
+<div class="row">
+  <div class="col-md-2">
+    <nav>
+      <ul class="nav nav-pills card-header-pills <%%= 'flex-column' if options[:vertical] %>" id="nav-tab" role="tablist">
+        <%% tabs.each_with_index do |tab, index| %>
+          <li class="nav-item" role="presentation" style="max-width:100%">
+            <div class="text-nowrap text-truncate nav-link <%%= options[:active_tab] ? ('active' if tab[:id] == options[:active_tab]) : ('active' if index == 0) %>"
+                 id="nav-<%%= tab[:id].underscore %>-tab"
+                 data-<%%= 'bs-' unless options[:legacy] %>toggle="tab"
+                 data-<%%= 'bs-' unless options[:legacy] %>target="#nav-<%%= tab[:id] %>"
+                 role="tab"
+                 aria-controls="home-tab-pane" aria-selected="true">
+              <%%= tab[:icon] %>
+              <%%= tab[:name] %>
+            </div>
+          </li>
+        <%% end %>
+      </ul>
+    </nav>
+  </div>
+  <div class="col-md-10">
+    <div class="tab-content" id="nav-tabContent">
+      <%% tabs.each_with_index do |tab, index| %>
+        <div class="tab-pane fade show <%%= options[:active_tab] ? ('active' if tab[:id] == options[:active_tab]) : ('active' if index == 0) %>"
+             id="nav-<%%= tab[:id] %>" role="tabpanel" aria-labelledby="nav-home-tab">
+          <%%= tab[:body] %>
+        </div>
+      <%% end %>
+    </div>
+  </div>
+</div>
