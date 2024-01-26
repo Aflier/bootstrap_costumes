@@ -20,6 +20,8 @@ module BootstrapCostumes
         template "views/stimulus/filters/_filter_toggle.html.erb", "app/views/stimulus/filters/_filter_toggle.html.erb"
 
         template "views/_tabbed_card.html.erb", "app/views/bootstrap_costumes/cards/_tabbed_card.html.erb"
+        template "views/_tabbed_vertical_card.html.erb", "app/views/bootstrap_costumes/cards/_tabbed_vertical_card.html.erb"
+        template "views/_vertical_tab_panel.html.erb", "app/views/bootstrap_costumes/cards/_vertical_tab_panel.html.erb"
 
 
         # copy_file File.expand_path("../../../../app/javascript/bootstrap_costumes/controllers/turbo_controller.js", __FILE__), "app/javascript/controllers/turbo_controller.js"
