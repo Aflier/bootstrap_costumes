@@ -11,8 +11,8 @@
       <%% end %>
     <%% end %>
 
-    <nav class="<%%= options[:legacy] ? 'float-left' : 'float-start' %>">
-      <ul class="nav nav-tabs card-header-tabs nav-pills d-none d-sm-block" id="nav-tab" role="tablist">
+    <nav class="d-none d-sm-block <%%= options[:legacy] ? 'float-left' : 'float-start' %>">
+      <ul class="nav nav-tabs card-header-tabs nav-pills" id="nav-tab" role="tablist">
         <%% options[:breadcrumbs].each_with_index do |breadcrumb, index| %>
           <li class="nav-item" role="presentation">
             <%%= link_to raw("#{breadcrumb[:name]} #{icons__right}"), breadcrumb[:path], class: 'nav-link' %>
