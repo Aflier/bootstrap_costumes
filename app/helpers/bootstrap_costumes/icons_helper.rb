@@ -25,5 +25,9 @@ module BootstrapCostumes
       raw '<i class="fa-solid fa-circle-exclamation"></i>'
     end
 
+    def icons__support
+      raw '<i class="fa-sharp fa-solid fa-comments-question-check"></i>'
+    end
+
   end
 end

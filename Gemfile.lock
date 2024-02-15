@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bootstrap_costumes (0.13.1)
+    bootstrap_costumes (0.14.2)
       rails (>= 5.2.2)
 
 GEM
