@@ -29,6 +29,8 @@
                     id="nav-<%%= tab[:id].underscore %>-tab"
                     data-<%%= 'bs-' unless options[:legacy] %>toggle="tab"
                     data-<%%= 'bs-' unless options[:legacy] %>target="#nav-<%%= tab[:id] %>"
+                    data-action="click->help-slider#setTab"
+                    data-help-slider-tab-param="<%%= tab[:id] unless index == 0 %>"
                     type="button"
                     role="tab"
                     aria-controls="home-tab-pane" aria-selected="true">
