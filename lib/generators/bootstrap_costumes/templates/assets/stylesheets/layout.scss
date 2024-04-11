@@ -53,7 +53,6 @@
 }
 
 #main-area {
-  padding-left: 85px;
   height: 100%;
   overflow-y: scroll;
 }
@@ -75,10 +74,57 @@
 }
 
 .container-side-nav-compact {
-  padding-left: 105px
+  padding-left: 87px
 }
 
 .row-side-nav-compact {
   height: 100vh;
   padding-top: 42px;
+}
+
+.card-header-slim {
+  .btn {
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 1px solid $secondary !important;
+    border-radius: 0 !important;
+  }
+
+  .btn:hover {
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 1px solid $secondary !important;
+    border-radius: 0 !important;
+  }
+
+  .btn:active {
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 1px solid $secondary !important;
+    background-color: $primary;
+    color: $white !important;
+    border-radius: 0 !important;
+  }
+
+  .btn:active {
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 1px solid $secondary !important;
+    border-radius: 0 !important;
+  }
+
+  padding: 0 !important;
+}
+
+.slim-header-text {
+  padding-top: 3px;
+  padding-left: 12px;
+}
+
+.card-footer-slim {
+  padding: 0 !important;
 }
