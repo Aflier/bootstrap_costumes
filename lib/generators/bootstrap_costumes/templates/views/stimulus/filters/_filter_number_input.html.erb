@@ -1,3 +1,5 @@
+<%% options = {} if local_assigns[:options].nil? %>
+
 <div data-controller="filters"
      data-filters-url-value="<%%= path %>"
      data-filters-field-value="<%%= value %>">
@@ -5,5 +7,6 @@
   <input type="number" data-filters-target="value"
          class="form-control form-control-sm"
          data-action="keyup->filters#inputChanged"
+         placeholder="<%%= options[:placeholder] %>"
          value="<%%= current_user.filter(value) %>">
 </div>
