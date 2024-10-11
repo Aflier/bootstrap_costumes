@@ -34,6 +34,9 @@ module SuperTableFilter
 
     def behaviour(field)
       behaviour_store[field.to_s]
+    rescue
+      self.behaviour_store = {}
+      self.save!
     end
 
     def handle_radio(field, by, related)
@@ -52,6 +55,5 @@ module SuperTableFilter
       return if filter(filter_name).nil?
       return klass.find_by(id: filter(filter_name).to_i) if klass.find_by(id: filter(filter_name).to_i)
     end
-
   end
 end
