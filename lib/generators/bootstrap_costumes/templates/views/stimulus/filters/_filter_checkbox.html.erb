@@ -11,8 +11,8 @@
   <%%= link_to path_on, data: { controller: 'turbo', turbo_spin_value: 'true' },
               class: "btn btn-sm text-decoration-none #{options[:off_class]}",
               id: "#{options[:id]}" do %>
-    <span data-turbo-target="spinner" hidden><%%= icons__spinner %> <%= options[:label] %></span>
-    <span data-turbo-target="label"><%%= icons__square %> <%= options[:label] %></span>
+    <span data-turbo-target="spinner" hidden><%%= icons__spinner %> <%%= options[:label] %></span>
+    <span data-turbo-target="label"><%%= icons__square %> <%%= options[:label] %></span>
   <%% end %>
 <%% end %>
 
