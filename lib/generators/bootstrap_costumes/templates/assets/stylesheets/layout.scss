@@ -15,10 +15,10 @@
 
 #fixed-row {
   padding-top: 56px;
-  height: 100vh;
+  padding-bottom: 56px;
 }
 
-#side-nav {
+.side-nav-content {
   background-color: #172751;
   color: white;
 
@@ -38,24 +38,23 @@
     color: black;
   }
 
-  .in-one {
-    padding-left: 30px;
-  }
-
-  .in-two {
-    padding-left: 60px;
-  }
-
   hr {
     border: 1px solid white;
     width: 100%
   }
 }
 
-#main-area {
-  height: 100%;
-  overflow-y: scroll;
+
+@media (min-width: 576px) {
+  .container-side-nav-compact {
+    padding-left: 90px
+  }
+
+  #main-area {
+    padding-bottom: 61px;
+  }
 }
+
 
 .inner-scroll {
   max-height: 100%;
@@ -67,64 +66,13 @@
 
 .side-nav-compact {
   position: fixed;
-  top: 0px;
-  bottom: 0px;
+  top: 0;
+  bottom: 0;
   width: 75px;
   padding-top: 50px
-}
-
-.container-side-nav-compact {
-  padding-left: 87px
 }
 
 .row-side-nav-compact {
   height: 100vh;
   padding-top: 42px;
-}
-
-.card-header-slim {
-  .btn {
-    border-top: 0 !important;
-    border-right: 0 !important;
-    border-bottom: 0 !important;
-    border-left: 1px solid $secondary !important;
-    border-radius: 0 !important;
-  }
-
-  .btn:hover {
-    border-top: 0 !important;
-    border-right: 0 !important;
-    border-bottom: 0 !important;
-    border-left: 1px solid $secondary !important;
-    border-radius: 0 !important;
-  }
-
-  .btn:active {
-    border-top: 0 !important;
-    border-right: 0 !important;
-    border-bottom: 0 !important;
-    border-left: 1px solid $secondary !important;
-    background-color: $primary;
-    color: $white !important;
-    border-radius: 0 !important;
-  }
-
-  .btn:active {
-    border-top: 0 !important;
-    border-right: 0 !important;
-    border-bottom: 0 !important;
-    border-left: 1px solid $secondary !important;
-    border-radius: 0 !important;
-  }
-
-  padding: 0 !important;
-}
-
-.slim-header-text {
-  padding-top: 3px;
-  padding-left: 12px;
-}
-
-.card-footer-slim {
-  padding: 0 !important;
 }

@@ -15,6 +15,7 @@ module BootstrapCostumes
         template "javascript/controllers/filter_controller.js", "app/javascript/controllers/filter_controller.js"
         template "javascript/controllers/filters_controller.js", "app/javascript/controllers/filters_controller.js"
         template "views/stimulus/filters/_filter_input.html.erb", "app/views/stimulus/filters/_filter_input.html.erb"
+        template "views/stimulus/filters/_filter_checkbox.html.erb", "app/views/stimulus/filters/_filter_checkbox.html.erb"
         template "views/stimulus/filters/_filter_number_input.html.erb", "app/views/stimulus/filters/_filter_number_input.html.erb"
         template "views/stimulus/filters/_filter_radio.html.erb", "app/views/stimulus/filters/_filter_radio.html.erb"
         template "views/stimulus/filters/_filter_toggle.html.erb", "app/views/stimulus/filters/_filter_toggle.html.erb"

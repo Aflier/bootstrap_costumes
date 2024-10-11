@@ -1,6 +1,7 @@
 <%% options = {} if local_assigns[:options].nil? %>
 
 <div data-controller="filters"
+     class="input-group"
      data-filters-url-value="<%%= path %>"
      data-filters-field-value="<%%= value %>">
 
@@ -11,4 +12,11 @@
          data-action="keyup->filters#inputChanged keyup->supertable#fadeContent"
          placeholder="<%%= options[:placeholder] %>"
          class="form-control" value="<%%= current_user.filter(value) %>">
+
+  <div class="input-group-append">
+    <button class="input-group-text"
+            data-action="click->filters#clear">
+      <i class="fas fa-eraser"></i>
+    </button>
+  </div>
 </div>
